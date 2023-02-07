@@ -32,7 +32,7 @@
       #main {
         background-color: rgb(94, 166, 230);
         width: 30%;
-        height: 60%;
+        height: 67%;
         border-radius: 6px;
       }
 
@@ -115,50 +115,62 @@
         <p id="slider-content">
           Password Length: <span id="slider-value"></span>
         </p>
-        <input
-          type="range"
-          data-theme="light"
-          id="slider"
-          max="30"
-          min="8"
-          value="15"
-          step="1"
-        />
       </div>
       <p id="sett">Password Settings</p>
       <div id="checkboxes">
         <label
+          >Lowercase (a-z): <span id="l_num">4</span
           ><input
-            type="checkbox"
+            type="range"
             name="lowercase"
             data-theme="light"
             id="lowercase"
-            checked
-          />Lowercase (a-z)</label
-        >
+            class="input"
+            min="1"
+            max="10"
+            value="4"
+        /></label>
         <label
+          >Uppercase (a-z): <span id="u_num">4</span
           ><input
-            type="checkbox"
+            type="range"
             name="uppercase"
             data-theme="light"
             id="uppercase"
-          />Uppercase (a-z)</label
-        >
+            class="input"
+            min="1"
+            max="10"
+            value="4"
+        /></label>
         <label
-          ><input type="checkbox" name="numbers" data-theme="light" id="nums" />
-          Numbers (0-9)
+          >Numbers (0-9): <span id="nums">4</span
+          ><input
+            type="range"
+            name="numbers"
+            data-theme="light"
+            id="nums"
+            class="input"
+            min="1"
+            max="10"
+            value="4"
+          />
         </label>
         <label
+          >Symbols (!*$): <span id="syms">4</span
           ><input
-            type="checkbox"
+            type="range"
             name="symbols"
             data-theme="light"
             id="symbols"
-          />Symbols (!*$)
+            class="input"
+            min="1"
+            max="10"
+            value="4"
+          />
         </label>
       </div>
       <div id="btn">
-        <button>GENERATE PASSWORD</button>
+        <button id="get">GENERATE PASSWORD</button>
       </div>
     </div>
     <script src="script.js"></script>
