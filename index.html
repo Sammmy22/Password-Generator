@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="pico.min.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <style>
       body {
         font-family: sans-serif;
@@ -27,7 +32,7 @@
       #main {
         background-color: rgb(94, 166, 230);
         width: 30%;
-        height: 65%;
+        height: 60%;
         border-radius: 6px;
       }
 
@@ -54,11 +59,12 @@
       }
 
       #generated {
-        margin: auto;
+        margin: 0;
         width: 80%;
         height: 50px;
         background-color: azure;
-        border-radius: 4px;
+        border-radius: 5px;
+        display: inline-block;
       }
       #checkboxes {
         display: grid;
@@ -75,14 +81,36 @@
         margin: auto;
         width: 80%;
       }
+      #copy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        /* position: absolute; */
+      }
+      #top {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+      }
+      #slider-content {
+        margin-top: 10px;
+      }
     </style>
     <title>Password Generator</title>
   </head>
   <body>
     <div id="main">
       <div id="display">Password Generator</div>
-      <div id="generated"><span id="pass"></span></div>
       <hr />
+      <div id="top">
+        <input type="text" disabled id="generated" data-theme="light" />
+        <button id="copy"><i class="fa-regular fa-copy"></i></button>
+      </div>
       <div id="range">
         <p id="slider-content">
           Password Length: <span id="slider-value"></span>
